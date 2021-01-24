@@ -1,20 +1,16 @@
     function excuseGenerator(){
 
-        let who = ['The dog','My grandma','His turtle','My bird'];
-        let action = ['ate','peed','crushed','broke'];
-        let what = ['my homework', 'the keys', 'the car'];
-        let when = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
-        let fullSentence = [who, action, what, when]
+        const WHO = ['The dog','My grandma','His turtle','My bird'];
+        const ACTION = ['ate','peed','crushed','broke'];
+        const WHAT = ['my homework', 'the keys', 'the car'];
+        const WHEN = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
+        const FULL_SENTENCE = [WHO, ACTION, WHAT, WHEN]
         let excuse="";
 
-        for(var i=0;i<fullSentence.length;i++){
-            excuse.concat(fullSentence[i][Math.floor(Math.random() * fullSentence[i].length)]);
+        for(let i=0;i<FULL_SENTENCE.length;i++){
+            excuse.concat(FULL_SENTENCE[i][Math.floor(Math.random() * FULL_SENTENCE[i].length)]);
             excuse.concat(" ");
         }
-        excuse.concat(".")
-
-        // excuse = who[Math.floor((Math.random() * who.length) )] + " " + action[Math.floor((Math.random() * action.length))] + 
-        // " " + what[Math.floor((Math.random() * what.length) )] + " " + when[Math.floor((Math.random() * when.length))]+".";
-
+        excuse.concat(". Un-believable!!")
         document.getElementById("excuse").innerHTML=excuse;
     }
